@@ -5,6 +5,9 @@ We know that food is fundamental to the human experience. It has deep ties to ou
 
 1) Dataset: Used kaggle based dataset from website called food.com. This dataset did not contain images but image URLs. In order to get access to the images, I built an Image scraper using REST APIs. The final data set which was divided into files: Image dataset (15 GB) and Recipe dataset (1.5 GB).
 
-2) Data Processing: Dropped irrelevant columns to our problem statements such as user ratings and reviews from the recipe dataset, records that didn’t have an image URL.
+2) Data Processing: Dropped irrelevant columns to our problem statements such as user ratings and reviews from the recipe dataset, records that didn’t have an image URL and finally, developed and image scraper.
 
-3) Model: Leveraged 
+3) Model: Leveraged CNN to built the model, where the downloaded image is normalized using pre-process input function of VGG16 and encoding of the input image is extracted from the average pooled layer of the VGG-16 NN. Finally, based on Jaccard Distance, the closest image encoding in the train dataset was found to generate the corresponding recipe and nutritional information given the test data image encoding.
+
+
+
